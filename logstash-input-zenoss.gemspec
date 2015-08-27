@@ -24,7 +24,11 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'beefcake'
   s.add_runtime_dependency 'logstash-input-rabbitmq'
-  s.add_runtime_dependency 'bunny'
+
+  # enforce pre 2.0 bunny and amq-protocol versions since both are now
+  # exclusive for Ruby 2.0+ (and only JRuby 9.0.0.0 is > 1.9)
+  s.add_runtime_dependency 'bunny', '< 2.0.0'
+  s.add_runtime_dependency 'amq-protocol', '< 2.0.0'
 
   s.add_development_dependency 'logstash-devutils'
 end
