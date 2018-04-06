@@ -1,5 +1,6 @@
 :plugin: zenoss
 :type: input
+:default_codec: plain
 
 ///////////////////////////////////////////
 START - GENERATED VARIABLES, DO NOT EDIT!
@@ -396,3 +397,5 @@ The vhost to use. If you don't know what this is, leave the default.
 
 [id="plugins-{type}s-{plugin}-common-options"]
 include::{include_path}/{type}.asciidoc[]
+
+:default_codec!:
